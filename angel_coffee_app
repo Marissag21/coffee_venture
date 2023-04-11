@@ -1,0 +1,18 @@
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/coffee-form', methods=['POST'])
+def coffee_form():
+    roast = request.form['roast']
+    bitter_sweet = request.form['bitter-sweet']
+    flavors = request.form['flavors']
+    result = f"You like {roast} roast coffee that is {bitter_sweet} and has {flavors} flavors."
+    return result
+
+if __name__ == '__main__':
+    app.run(debug=True)
