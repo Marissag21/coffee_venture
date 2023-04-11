@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coffee Preference Quiz</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Coffee Preference Quiz</h1>
+		</header>
+		<main>
+			<p>Select your coffee preferences:</p>
+			<form id="coffee-form">
+				<label for="roast">Coffee Roast:</label>
+				<select id="roast">
+					<option value="light">Light</option>
+					<option value="medium">Medium</option>
+					<option value="dark">Dark</option>
+				</select><br><br>
+				<label for="bitter-sweet">Bitter or Sweet:</label>
+				<select id="bitter-sweet">
+					<option value="bitter">Bitter</option>
+					<option value="sweet">Sweet</option>
+				</select><br><br>
+	
+				<label for="flavors">Flavors:</label>
+				<select id="flavors">
+					<option value="chocolate">Chocolate</option>
+					<option value="fruit">Fruit</option>
+					<option value="nut">Nut</option>
+				</select><br><br>
+	
+				<input type="submit" value="Submit">
+			</form>
+		</main>
+		<aside>
+			<h2>Enjoy a cup of coffee!</h2>
+			<img src="https://cdn.pixabay.com/photo/2016/02/19/11/20/coffee-1209863_1280.jpg" alt="Coffee cup" width="300">
+			<img src="https://cdn.pixabay.com/photo/2016/03/27/18/54/coffee-1284041_1280.jpg" alt="Coffee beans" width="300">
+			<img src="https://cdn.pixabay.com/photo/2016/11/18/17/20/coffee-1839870_1280.jpg" alt="Coffee latte" width="300">
+		</aside>
+	</div>
+	<script src="script.js"></script>
+
+</body>
+</html>

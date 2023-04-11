@@ -1,0 +1,22 @@
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+form {
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+}

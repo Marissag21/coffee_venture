@@ -1,0 +1,5 @@
+roast = input("What kind of coffee roast do you prefer (light/medium/dark)? ")
+bitter_sweet = input("Do you prefer your coffee bitter or sweet? ")
+flavors = input("What flavors do you like in your coffee (chocolate/fruit/nut)? ")
+
+print("You like", roast, "roast coffee that is", bitter_sweet, "and has", flavors, "flavors.")

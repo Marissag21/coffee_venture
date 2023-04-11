@@ -1,0 +1,17 @@
+const form = document.querySelector('#coffee-form');
+const roastSelect = document.querySelector('#roast');
+const bitterSweetSelect = document.querySelector('#bitter-sweet');
+const flavorsSelect = document.querySelector('#flavors');
+const resultDiv = document.querySelector('#result');
+
+if (form && roastSelect && bitterSweetSelect && flavorsSelect && resultDiv) {
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const roast = (<HTMLSelectElement>roastSelect).value;
+    const bitterSweet = (<HTMLSelectElement>bitterSweetSelect).value;
+    const flavors = (<HTMLSelectElement>flavorsSelect).value;
+    const result = `You like ${roast} roast coffee that is ${bitterSweet} and has ${flavors} flavors.`;
+    resultDiv.textContent = result;
+  });
+}
+
