@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import pickle
-import sklearn
 
 app = Flask(__name__)
 
@@ -26,18 +25,18 @@ def predict():
     flavor = request.form['flavor']
     price = request.form['price']
 
-    # Use the decision tree model to predict the roast level
-    dt_prediction = log_reg_model.predict([[acidity, aftertaste, aroma, body, flavor, price]])[0]
+    # Use the logistic regression model to predict the roast level
+    log_reg_prediction = log_reg_model.predict([[acidity, aftertaste, aroma, body, flavor, price]])[0]
 
     # Get the top 3 rated coffees with the predicted roast level
-    top_coffees = coffee_data[coffee_data['roast_level'] == dt_prediction].nlargest(3, 'rating')
+    top_coffees = coffee_data[coffee_data['roast_level'] == log_reg_prediction].nlargest(3, 'rating')
 
     # Convert the top coffees to a list of dictionaries
     top_coffees_list = top_coffees.to_dict('records')
 
     # Return the predictions and top coffees as JSON
     return jsonify({
-        'dt_prediction': dt_prediction,
+        'log_reg_prediction': log_reg_prediction,
         'top_coffees': top_coffees_list
     })
 
