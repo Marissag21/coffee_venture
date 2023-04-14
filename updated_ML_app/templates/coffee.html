@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Coffee Preference Quiz</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Coffee Preference Quiz</h1>
+        </header>
+        <main>
+            <p>Select your coffee preferences:</p>
+            <form id="coffee-form">
+                <label for="acidity">Acidity (How tart or sour the coffee tastes):</label>
+                <input type="range" id="acidity" name="acidity" min="6" max="10">
+                <span id="acidity-value">0</span><br><br>
+
+                <label for="aftertaste">Aftertaste (The lingering flavor in your mouth after you drink the
+                    coffee):</label>
+                <input type="range" id="aftertaste" name="aftertaste" min="6" max="10">
+                <span id="aftertaste-value">0</span><br><br>
+
+                <label for="aroma">Aroma:(The smell of the coffee)</label>
+                <input type="range" id="aroma" name="aroma" min="6" max="10">
+                <span id="aroma-value">0</span><br><br>
+
+                <label for="body">Body (The thickness or heaviness of the coffee):</label>
+                <input type="range" id="body" name="body" min="6" max="10">
+                <span id="body-value">0</span><br><br>
+
+                <label for="flavor">Flavor (The overall taste of the coffee):</label>
+                <input type="range" id="flavor" name="flavor" min="6" max="10">
+                <span id="flavor-value">0</span><br><br>
+
+                <label for="price">Price (The cost of the coffee oz):</label>
+                <input type="range" id="price" name="price" min="0" max="30">
+                <span id="price-value">$0</span><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+            <p id="roast-prediction"></p>
+            <p id="recommendations"></p>
+            <p id="top-3"></p>
+            <p id="recommendations-list"></p>
+        </main>
+        <aside>
+            <h2>Enjoy a cup of coffee!</h2>
+            <img src="../static/coffee_hang.jpg" alt="Coffee cup" width="300">
+            <img src="../static/coffee_hang.jpg" alt="Coffee beans" width="300">
+            <img src="../static/coffee_hang.jpg" alt="Coffee latte" width="300">
+        </aside>
+    </div>
+    <script src="../static/coffee.js"></script>
+</body>
+
+</html>
