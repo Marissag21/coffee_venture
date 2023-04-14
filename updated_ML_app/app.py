@@ -50,12 +50,19 @@ def predict():
         roast_prediction = "Go drink some tea"
 
         
-    # Get the top 3 rated coffees with the predicted roast level
-    #top_coffees = coffee_data[[coffee_data['roast_level'] == roast_prediction & coffee_data['acidity' == acidity]]].nlargest(3, 'rating')
-    top_coffees = coffee_data[(coffee_data['roast_level'] == roast_prediction) & (coffee_data['acidity_structure'] == acidity) & (coffee_data['aftertaste'] == aftertaste)& (coffee_data['aroma'] == aroma)& (coffee_data['body'] == body)& (coffee_data['flavor'] == flavor)].nlargest(3, 'rating')
+    # Get the top 3 rated coffees with the predicted roast level and all features
+    top_coffees = coffee_data[(coffee_data['roast_level'] == roast_prediction) & (coffee_data['acidity_structure'] == acidity) & (coffee_data['aftertaste'] == aftertaste) & (coffee_data['aroma'] == aroma)& (coffee_data['body'] == body) & (coffee_data['flavor'] == flavor)]
 
-    print(type(top_coffees))
-    print(top_coffees)
+    if len(top_coffees) < 3:
+    # Get the top 3 rated coffees with the predicted roast level and any other features
+        remaining_coffees = coffee_data[(coffee_data['roast_level'] == roast_prediction) & (coffee_data.index.isin(top_coffees.index) == False)].nlargest(3-len(top_coffees), 'rating')
+        top_coffees = pd.concat([top_coffees, remaining_coffees])
+
+    else:
+        top_coffees = top_coffees.nlargest(3, 'rating')
+    #print(type(top_coffees))
+    #print(top_coffees)
+
 
     # Convert the top coffees to a list of dictionaries
     top_coffees_list = top_coffees.to_dict('records')
