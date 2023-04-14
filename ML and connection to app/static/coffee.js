@@ -34,7 +34,7 @@ function updateSliderValue(slider, output) {
       flavor: parseInt(document.getElementById('flavor').value),
       price: parseFloat(document.getElementById('price').value)
     };
-  
+   
     // Send coffee preferences to Flask app for prediction
     fetch('/predict', {
       method: 'POST',
