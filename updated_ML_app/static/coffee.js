@@ -49,7 +49,7 @@ form.addEventListener('submit', event => {
     .then(data => {
       // Update the page with the predicted roast type and recommended coffees
       console.log(data.top_coffees)
-      document.getElementById('roast-prediction').innerHTML = `You should try ${data.prediction} coffee.`;
+      document.getElementById('roast-prediction').innerHTML = `You should try a <b>${data.prediction}</b> coffee.`;
 
       if (data.prediction === 'Dark') {
         document.getElementById('recommendations').innerHTML = 'We recommend serving with a hearty breakfast or as a dessert coffee.';
@@ -60,19 +60,21 @@ form.addEventListener('submit', event => {
       } else {
         document.getElementById('recommendations').innerHTML = 'Go drink some tea';
       }
-      document.getElementById('top-3').innerHTML = 'These are the top three coffees we recommend you try:'
+      document.getElementById('top-3').innerHTML = '<b><u>These are the top three coffees we recommend you try:</b></u>'
       // Display the top recommended coffees
       const topCoffees = data.top_coffees;
       let recommendationsList = '';
       for (let i = 0; i < topCoffees.length; i++) {
-        recommendationsList += `<li> <p>Name and description of coffee: <p/> <p>${topCoffees[i].title} - ${topCoffees[i].blind_assessment}<p/> <p>The acidity is ${topCoffees[i].acidity_structure}. The aftertaste is ${topCoffees[i].aftertaste}. The aroma is ${topCoffees[i].aroma}. The body is ${topCoffees[i].body}. The flavor is ${topCoffees[i].flavor}.<p/> <p>The rating is ${topCoffees[i].rating}. <p/></li>`
-      }
-      console.log(recommendationsList)
-      // <p>The price is ${topCoffees[i].usd_per_oz} dollars per ounce.<p/> 
-      // topCoffees.forEach(coffee => {
-      //   recommendationsList += `<li>${coffee.name} - ${coffee.roaster} (${coffee.rating} rating)</li>`;
-      // });
-      document.getElementById('recommendations-list').innerHTML = recommendationsList;
+          recommendationsList += `<li> <p><b><u>${topCoffees[i].title}</b></u> : This is a ${topCoffees[i].blind_assessment}<p/>
+          <p>The acidity is ${topCoffees[i].acidity_structure}. 
+            The aftertaste is ${topCoffees[i].aftertaste}.
+            The aroma is ${topCoffees[i].aroma}. 
+            The body is ${topCoffees[i].body}. 
+            The flavor is ${topCoffees[i].flavor}.<p/>
+            <p>The overall rating of this coffee is ${topCoffees[i].rating}. <p/></li>`
+          }
+      document.getElementById('recommendations-list').innerHTML = `<ol>${recommendationsList}</ol>`;
+      console.log(recommendationsList);
     })
     .catch(error => {
       console.error('Error:', error);
