@@ -1,14 +1,16 @@
 
 body {
 	font-family: Arial, sans-serif;
-}
+	background-color:#FAEBD7;
+	font-size: small;
+	}
 
 h1 {
-	text-align: center;
-}
+	text-align: center
+	}
 
 form {
-	margin: 0 auto;
+	margin: 0 auto; 
 	max-width: 500px;
 }
 
@@ -18,5 +20,46 @@ select {
 	margin: 8px 0;
 	border: none;
 	border-radius: 4px;
-	background-color: #f1f1f1;
+	
 }
+
+header {
+	background-color: #3d302423;
+	font-size: larger;
+  }
+  
+  h1 {
+	color: #754b07;
+  }
+
+.slider {
+	-webkit-appearance: none;
+	width: 40%;
+	height: 10px;
+	background-color: rgb(73, 52, 21);
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+  }
+  
+
+  .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 20px;
+	height: 15px;
+	background-color: #978d7b;
+	cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+	width: 8px;
+	height: 8px;
+	background-color: #5a3207;
+	cursor: pointer;
+  }
+  
+  h2 {
+	text-align: center;
+  }

@@ -28,48 +28,55 @@
     <div class="container">
         <header>
             <h1>Coffee Preference Quiz</h1>
+            
         </header>
         <main>
             <div style="text-align: center;">
                 <p>Select your coffee preferences:</p>
             </div>
             <form id="coffee-form">
-                <label for="acidity">Acidity (How tart or sour the coffee tastes):</label>
-                <input type="range" id="acidity" name="acidity" min="6" max="10">
+                <label for ="acidity" style="font-size: 25px"> Acidity</label>
+                <label for= "acidity"></label> (How tart or sour the coffee tastes) </label>
+                <input type="range" class="slider" id="acidity" name="acidity" min="6" max="10">
                 <span id="acidity-value">0</span><br><br>
 
-                <label for="aftertaste">Aftertaste (The lingering flavor in your mouth after you drink the
+                <label for ="aftertaste"style="font-size: 25px"> Aftertaste</label>
+                <label for="aftertaste"></label>(The lingering flavor in your mouth after you drink the
                     coffee):</label>
-                <input type="range" id="aftertaste" name="aftertaste" min="6" max="10">
+                <input type="range" class="slider"  id="aftertaste" name="aftertaste" min="6" max="10">
                 <span id="aftertaste-value">0</span><br><br>
 
-                <label for="aroma">Aroma:(The smell of the coffee)</label>
-                <input type="range" id="aroma" name="aroma" min="6" max="10">
+                <label for ="aroma" style="font-size: 25px"> Aroma</label>
+                <label for="aroma"></label>(The smell of the coffee)</label>
+                <input type="range"  class="slider" id="aroma" name="aroma" min="6" max="10">
                 <span id="aroma-value">0</span><br><br>
 
-                <label for="body">Body (The thickness or heaviness of the coffee):</label>
-                <input type="range" id="body" name="body" min="6" max="10">
+                <label for ="body" style="font-size: 25px"> Body</label>
+                <label for="body"></label>(The thickness or heaviness of the coffee):</label>
+                <input type="range"  class="slider" id="body" name="body" min="6" max="10">
                 <span id="body-value">0</span><br><br>
 
-                <label for="flavor">Flavor (The overall taste of the coffee):</label>
-                <input type="range" id="flavor" name="flavor" min="6" max="10">
+                <label for ="flavor" style="font-size: 25px"> Flavor</label>
+                <label for="flavor"></label>(The overall taste of the coffee with is the combined outcome of acidity, aftertaste, aroma and body):</label>
+                <input type="range"  class="slider" id="flavor" name="flavor" min="6" max="10">
                 <span id="flavor-value">0</span><br><br>
 
-                <label for="price">Price (The cost of the coffee oz):</label>
-                <input type="range" id="price" name="price" min="0" max="30">
+                <label for ="price" style="font-size: 25px"> Price</label>
+                <label for="price"></label>(The cost of the coffee per oz):</label>
+                <input type="range"  class="slider"  id="price" name="price" min="0" max="30">
                 <span id="price-value">$0</span><br><br>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Brew"style="background-color: #996633; color: white; font-size: 25px; padding: 7px 18px; border-radius: 5px;">
             </form>
             <p id="roast-prediction"></p>
             <p id="recommendations"></p>
             <p id="top-3"></p>
             <p id="recommendations-list"></p>
         </main>
-        <aside>
+         <aside>
             <h2>Enjoy a cup of coffee!</h2>
-            <img src="../static/coffee_hang.jpg" alt="Coffee cup" width="300">
-            <img src="../static/coffee_hang.jpg" alt="Coffee beans" width="300">
+            <img src="https://cdn.pixabay.com/photo/2016/03/30/21/59/coffee-beans-1291656_960_720.jpg" alt="Coffee cup" width="300">
+            <img src="https://cdn.pixabay.com/photo/2016/01/02/04/59/coffee-1117933_960_720.jpg" alt="Coffee beans" width="300">
             <img src="../static/coffee_hang.jpg" alt="Coffee latte" width="300">
         </aside>
     </div>

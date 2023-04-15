@@ -55,6 +55,10 @@ form.addEventListener('submit', event => {
         document.getElementById('recommendations').innerHTML = 'We recommend serving with a hearty breakfast or as a dessert coffee.';
       } else if (data.prediction === 'Medium-Light') {
         document.getElementById('recommendations').innerHTML = 'We recommend serving with lunch or as an afternoon pick-me-up.';
+      } else if (data.prediction === 'Medium') {
+        document.getElementById('recommendations').innerHTML = 'We recommend serving with savory options such as pasta, grilled cheese, salads, wraps etc.';
+      } else if (data.prediction === 'Medium-Dark') {
+        document.getElementById('recommendations').innerHTML = 'We recommend serving with lunch with meat options such as pork, beef etc.';
       } else if (data.prediction === 'Light') {
         document.getElementById('recommendations').innerHTML = 'We recommend serving with breakfast or as a mild coffee for any time of day.';
       } else {
