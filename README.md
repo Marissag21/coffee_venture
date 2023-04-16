@@ -36,7 +36,7 @@ After the predictions were made, we resampled the data with RandomOverSampler to
 
 Lastly, a function was created that is used for making predictions based on certain parameters that the consumer will be queried on, and the model is saved to a pkl file. 
 
-## Part 5: App Development
+## Part 4: App Development
 
 A Flask app is used to query the user for their input on coffee preferences, and based on their input, the user will get a prediction on the type of roast they'd like most with the top three recommended coffees along with their respective descriptions. They will also get the acidity, aftertaste, aroma, body, and flavor levels. 
 
