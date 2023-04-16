@@ -10,7 +10,7 @@ with open('logistic_regression_oversampled.pkl', 'rb') as f:
     log_reg_model = pickle.load(f)
 
 # Load the coffee data into a Pandas dataframe
-coffee_data = pd.read_csv('coffee_clean_final.csv')
+coffee_data = pd.read_csv('../final_data/final_coffee_data.csv')
 
 @app.route('/')
 def index():
