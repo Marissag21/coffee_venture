@@ -4,7 +4,8 @@ Calling all coffee lovers! To understand the taste of of our users, we analyzed 
 
 Data source: https://www.kaggle.com/datasets/patkle/coffeereviewcom-over-7000-ratings-and-reviews
 
-Part 1: Data Cleaning
+## Part 1: Data Cleaning
+
 To begin, dependencies were first loaded onto our Jupyter Notebook, and the CSV was read into the dataframe. In order to begin cleaning the data, the columns 'with_milk', 'agtron', 'roaster', 'url', 'bottom_line', 'review_date' were removed because they were not neccessary for analysis and predictions. Then, the null values were dropped. 
 
 The 'roaster_location'  column was split into new columns('city', 'state'). Next, any additional null values were dropped and the data types were changed. 
@@ -17,11 +18,15 @@ Next, the cost was converted to USD. The easy-exchange-rates package was used fo
 
 Lastly, the price was calculated in USD per ounce. A new column was created 'cost_usd' and the 'numeric_cost' and currency conversion were divided to get the price in USD. Another column was created 'usd_per_oz', and the 'cost_usd' was divided by 'ounces' to get the price per ounce. Then the 'numeric_cost', 'currency', 'ounces', 'cost_usd' columns were dropped since they were not needed any longer. The column 'usd_per_oz' was then changed to type (float) and money_df  was saved as a csv for analysis. 
 
-Part 2: Visualizations
+## Part 2: Visualizations
 
-Part 3: Data Preprocessing
+Using the cleaned data, visualizations were created through Tableau in order to gain a better understanding about the coffee data, and view patterns and trends. Visualizations created include the count of coffees per roast level, the characterization of each roast level, the distribution of ratings, and the origin countries for the coffee beans. 
 
-Part 4: Machine Learning Model
+Tableau Visualization Links:
+- https://public.tableau.com/views/CoffeeMap_16816559402780/Sheet6?:language=en-US&:display_count=n&:origin=viz_share_link
+- https://public.tableau.com/views/CoffeeCharts_16816551362230/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
+
+## Part 3: Data Preprocessing and Machine Learning Model
 
 First, the csv with the data is read in as a DataFrame and 'roast_level' value_counts is printed. Next, the roast levels are categorized  by number using a for loop. The 'roast_level column is cast as an integer, and the columns that are not needed for the prediction are dropped.
 
@@ -31,12 +36,14 @@ After the predictions were made, we resampled the data with RandomOverSampler to
 
 Lastly, a function was created that is used for making predictions based on certain parameters that the consumer will be queried on, and the model is saved to a pkl file. 
 
-Part 5: App Development
+## Part 5: App Development
 
 A Flask app is used to query the user for their input on coffee preferences, and based on their input, the user will get a prediction on the type of roast they'd like most with the top three recommended coffees along with their respective descriptions. They will also get the acidity, aftertaste, aroma, body, and flavor levels. 
 
 JavaScript is used for interactivity and css is used for adding style and background. 
 
-Summary:
+## Summary:
 
 To sum it all up, we realized that more than half of the roast levels are medium-light, and that  our data was skewed because of the uneven numbers. Before oversampling and balancing the data, the accuracy score was coming back at 72%.
+
+Prezi: 
