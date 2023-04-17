@@ -26,6 +26,18 @@ Tableau Visualization Links:
 - https://public.tableau.com/views/CoffeeMap_16816559402780/Sheet6?:language=en-US&:display_count=n&:origin=viz_share_link
 - https://public.tableau.com/views/CoffeeCharts_16816551362230/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
 
+Roast level by Roaster location:
+Dark roast Coffees are roasted on the west coast whereas Medium to light coffees are roasted on the Northern/North-esatern part of the country.
+- https://public.tableau.com/views/COFFEEDATAVISUALS/RoastlevelbyRoasterlocation?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+
+Cost Analysis:
+
+Light roast coffees are the most expensive Roast.
+https://public.tableau.com/views/CoffeecostbyRoastLevel/MostexpensivebyRoastlevel?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+
+The most expensive Coffe is from the Boquete region of western Panama.
+https://public.tableau.com/views/Coffeecostbyorigin/MostexpensivebyOrigin?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+
 ## Part 3: Data Preprocessing and Machine Learning Model
 
 First, the csv with the data is read in as a DataFrame and 'roast_level' value_counts is printed. Next, the roast levels are categorized  by number using a for loop. The 'roast_level column is cast as an integer, and the columns that are not needed for the prediction are dropped.
