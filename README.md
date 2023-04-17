@@ -60,4 +60,4 @@ JavaScript is used for interactivity and css is used for adding style and backgr
 
 To sum it all up, we realized that more than half of the roast levels are medium-light, and that  our data was skewed because of the uneven numbers. Before oversampling and balancing the data, the accuracy score was at 72%. After oversampling, the accuracy returned at 45%. Our data was limited to a certain amount of features which is what hurt our accuracy score in the end. The time period for this project was very limited which didn't allow for extensive preprocessing with the string data columns. This could've helped by adding additional features to our data set thus improving our accuracy score.  On the bright side, with additional preprocessing this ML Model could continue to improve and take us on a continuous coffee venture. 
 
-Prezi:
+Prezi:https://prezi.com/view/86eoAZO5Y6OYEbuntGOc/
