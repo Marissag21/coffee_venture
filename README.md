@@ -73,10 +73,15 @@ Prezi:https://prezi.com/view/86eoAZO5Y6OYEbuntGOc/
 Project Members:
 
 Ankita Sarkar
+
 Kim Sernett
+
 Iqra Imam
+
 Angel Toscano
+
 Raelle Nalos
+
 Marissa Gallegos
 
 
