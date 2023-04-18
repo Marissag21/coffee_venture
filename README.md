@@ -6,7 +6,8 @@ Data source: https://www.kaggle.com/datasets/patkle/coffeereviewcom-over-7000-ra
 
 ##Pipeline Model
 
-![image_720](https://user-images.githubusercontent.com/115592072/232641942-bce5dcea-1ab9-43e6-a2cc-072b0f459b43.png)
+![image_720](https://user-images.githubusercontent.com/115592072/232645533-85db0236-b8e4-4ea1-9487-79a689461318.png)
+
 
 ## Part 1: Data Cleaning
 
