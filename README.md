@@ -4,6 +4,10 @@ Calling all coffee lovers! To understand the taste of of our users, we analyzed 
 
 Data source: https://www.kaggle.com/datasets/patkle/coffeereviewcom-over-7000-ratings-and-reviews
 
+##Pipeline Model
+
+![image_720](https://user-images.githubusercontent.com/115592072/232641942-bce5dcea-1ab9-43e6-a2cc-072b0f459b43.png)
+
 ## Part 1: Data Cleaning
 
 To begin, dependencies were first loaded onto our Jupyter Notebook, and the CSV was read into the dataframe. In order to begin cleaning the data, the columns 'with_milk', 'agtron', 'roaster', 'url', 'bottom_line', 'review_date' were removed because they were not neccessary for analysis and predictions. Then, the null values were dropped.
@@ -56,8 +60,23 @@ A Flask app is used to query the user for their input on coffee preferences, and
 
 JavaScript is used for interactivity and css is used for adding style and background.
 
+![App Landing Page](https://user-images.githubusercontent.com/115592072/232641818-1d15ce0e-edc6-44c9-b90e-5d506356dd6d.png)
+
+
+
 ## Summary Shortcomings and Observations:
 
 To sum it all up, we realized that more than half of the roast levels are medium-light, and that  our data was skewed because of the uneven numbers. Before oversampling and balancing the data, the accuracy score was at 72%. After oversampling, the accuracy returned at 45%. Our data was limited to a certain amount of features which is what hurt our accuracy score in the end. The time period for this project was very limited which didn't allow for extensive preprocessing with the string data columns. This could've helped by adding additional features to our data set thus improving our accuracy score.  On the bright side, with additional preprocessing this ML Model could continue to improve and take us on a continuous coffee venture. 
 
 Prezi:https://prezi.com/view/86eoAZO5Y6OYEbuntGOc/
+
+Project Members:
+
+Ankita Sarkar
+Kim Sernett
+Iqra Imam
+Angel Toscano
+Raelle Nalos
+Marissa Gallegos
+
+
